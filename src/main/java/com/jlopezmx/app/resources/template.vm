@@ -1,0 +1,46 @@
+<html>
+  <header>#parse("fragments/header.vm")</header>
+	<body>
+		<p>
+			Hello ${adminName},
+		</p>
+		<p>
+			The following unused ${applicationName} credits will expire, and must be used prior to their expiration date on ${expiryDate}.
+		</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<b>Order no.:</b>
+					</td>
+					<td>${creditOrderNumber}</td>
+				</tr>
+				<tr>
+					<td>
+						<b>Unused credits:</b>
+					</td>
+					<td>
+						${numberOfUnusedCreditsExpired}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b>Purchase date:</b>
+					</td>
+					<td>
+						${purchaseDate}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b>Expiration date:</b>
+					</td>
+					<td>
+						${expiryDate}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	<footer>#parse("fragments/footer.vm")</footer>
+</html>
